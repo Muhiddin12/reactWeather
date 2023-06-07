@@ -1,0 +1,21 @@
+.search {
+  position: absolute;
+  right: 0;
+  max-width: 500px;
+  padding: 50px;
+  background: #0000004f;
+}
+
+.title {
+  color: white;
+  font-size: 60px;
+}
+
+.detail {
+  display: flex;
+  justify-content: space-between;
+
+  p {
+    font-size: 30px;
+  }
+}
