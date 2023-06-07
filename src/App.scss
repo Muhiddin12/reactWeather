@@ -165,7 +165,7 @@ h6 {
 ////////
 
 .wrapper {
-  background-image: linear-gradient(to bottom, #bb8d51, #bac5ce);
+  background-image: linear-gradient(to bottom, #bb8d51, #d8dadb);
   margin: 0 auto;
 
   @media (max-width: 750px) {
@@ -176,7 +176,7 @@ h6 {
 }
 
 .wrapper2 {
-  background-image: linear-gradient(to bottom, #2fca3c, #bac5ce);
+  background-image: linear-gradient(to bottom, #2fca3c, #d8dadb);
   margin: 0 auto;
 
   @media (max-width: 750px) {
@@ -187,7 +187,7 @@ h6 {
 }
 
 .wrapper3 {
-  background-image: linear-gradient(to bottom, #2f84ca, #bac5ce);
+  background-image: linear-gradient(to bottom, #2f84ca, #d8dadb);
   margin: 0 auto;
 
   @media (max-width: 750px) {
@@ -326,6 +326,7 @@ h6 {
 .countryName {
   font-size: 40px;
   color: white;
+  margin-bottom: 5px;
 
   @media (max-width: 870px) {
     font-size: 30px;
@@ -402,7 +403,70 @@ h6 {
 .icon {
   width: 90px;
   height: 90px;
-  background: #a9ddee;
+  background: #ccb495;
+  align-items: center;
+  display: flex;
+  position: absolute;
+  top: 0;
+  right: 0;
+  justify-content: center;
+
+  @media (max-width: 920px) {
+    width: 70px;
+    height: 70px;
+  }
+
+  @media (max-width: 870px) {
+    width: 60px;
+    height: 60px;
+  }
+
+  @media (max-width: 750px) {
+    height: 300px;
+    max-width: 330px;
+    padding: 10px;
+    position: static;
+    border-radius: 10px;
+    display: none;
+  }
+}
+
+.icon2 {
+  width: 90px;
+  height: 90px;
+  background: #9dd4a1;
+  align-items: center;
+  display: flex;
+  position: absolute;
+  top: 0;
+  right: 0;
+  justify-content: center;
+
+  @media (max-width: 920px) {
+    width: 70px;
+    height: 70px;
+  }
+
+  @media (max-width: 870px) {
+    width: 60px;
+    height: 60px;
+  }
+
+  @media (max-width: 750px) {
+    height: 300px;
+    max-width: 330px;
+    padding: 10px;
+    position: static;
+    border-radius: 10px;
+    display: none;
+  }
+}
+
+
+.icon3 {
+  width: 90px;
+  height: 90px;
+  background: #9fb9ce;
   align-items: center;
   display: flex;
   position: absolute;
@@ -453,6 +517,14 @@ h6 {
 
   @media (max-width: 875px) {
     font-size: 15px;
+  }
+
+  @media (max-width: 750px) {
+    min-width: 380px;
+  }
+
+  @media (max-width: 500px) {
+    min-width: 280px;
   }
 }
 

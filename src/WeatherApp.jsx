@@ -6,6 +6,7 @@ import { weatherDataCreator } from "./redux/reduser";
 import cloud from "./cloud.png";
 import sun from "./sun.png";
 import rain from "./rain.png";
+import balanse from "./balanse.png";
 import Initial from "./components/Initial/Initial";
 import ballon from "./ballon.png";
 import "boxicons";
@@ -97,9 +98,9 @@ function WeatherApp() {
   return (
     <div
       className={
-        weatherFromRedux.main.temp > 30
+        weatherFromRedux.main.temp > 33
           ? "wrapper"
-          : weatherFromRedux.main.temp > 20
+          : weatherFromRedux.main.temp > 25
           ? "wrapper2"
           : "wrapper3"
       }
@@ -126,11 +127,11 @@ function WeatherApp() {
               <div className="statusImage">
                 <img
                   src={
-                    weatherFromRedux?.main?.temp > 30
-                      ? cloud
-                      : weatherFromRedux?.main?.temp > 20
+                    weatherFromRedux.main.temp > 33
                       ? sun
-                      : rain
+                      : weatherFromRedux.main.temp > 25
+                      ? balanse
+                      : cloud
                   }
                   alt="statusImage"
                 />
@@ -143,7 +144,15 @@ function WeatherApp() {
 
           <div className="search">
             <div className="searchInfo">
-              <div className="icon">
+              <div
+                className={
+                  weatherFromRedux.main.temp > 33
+                    ? "icon"
+                    : weatherFromRedux.main.temp > 25
+                    ? "icon2"
+                    : "icon3"
+                }
+              >
                 <box-icon color="black" size="md" name="search"></box-icon>
               </div>
               <div className="searchInput">
@@ -178,7 +187,7 @@ function WeatherApp() {
               <h2 className="title">Weather details</h2>
               <div className="details">
                 <div className="detail">
-                  <p>Cloudy</p> <p>{weatherFromRedux?.wind?.deg}%</p>
+                  <p>Clouds</p> <p>{weatherFromRedux?.clouds?.all}%</p>
                 </div>
                 <div className="detail">
                   <p>Humidity</p> <p>{weatherFromRedux?.main?.humidity}%</p>
