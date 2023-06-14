@@ -117,13 +117,13 @@ h6 {
   justify-content: center;
 }
 .dot {
-  border: 5px solid #ffffff;
+  border: 5px solid #44da1b;
   border-radius: 50px;
   width: 100px;
   height: 100px;
 }
 .dot2 {
-  border: 5px solid #a3a3a3;
+  border: 5px solid #707dce;
   border-radius: 50px;
   background-color: transparent;
   width: 100px;
@@ -153,13 +153,13 @@ h6 {
 @keyframes fadeOut {
   100% {
     visibility: hidden;
-    opacity: 0;
+    opacity: 1;
   }
 }
 @-webkit-keyframes fadeOut {
   100% {
     visibility: hidden;
-    opacity: 0.4;
+    opacity: 1;
   }
 }
 ////////
@@ -296,6 +296,14 @@ h6 {
   @media (max-width: 500px) {
     margin-bottom: 50px;
   }
+
+  @media (max-width: 320px) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 30px;
+  }
 }
 
 .degree {
@@ -304,6 +312,10 @@ h6 {
 
   @media (max-width: 870px) {
     font-size: 60px;
+  }
+
+  @media (max-width: 320px) {
+    margin-bottom: 15px;
   }
 }
 
@@ -331,6 +343,10 @@ h6 {
   @media (max-width: 870px) {
     font-size: 30px;
   }
+
+  @media (max-width: 320px) {
+    text-align: center;
+  }
 }
 
 .status {
@@ -340,13 +356,17 @@ h6 {
     gap: 20px;
     align-items: center;
   }
-} 
+}
 
 .statusImage {
   width: 50px;
 
   @media (max-width: 750px) {
     width: 80px;
+  }
+
+  @media (max-width: 320px) {
+    width: 60px;
   }
 
   img {
@@ -398,6 +418,10 @@ h6 {
     border-radius: 10px;
     margin-bottom: 15px;
   }
+
+  @media (max-width: 320px) {
+    width: 260px;
+  }
 }
 
 .icon {
@@ -410,6 +434,7 @@ h6 {
   top: 0;
   right: 0;
   justify-content: center;
+  cursor: pointer;
 
   @media (max-width: 920px) {
     width: 70px;
@@ -441,6 +466,7 @@ h6 {
   top: 0;
   right: 0;
   justify-content: center;
+  cursor: pointer;
 
   @media (max-width: 920px) {
     width: 70px;
@@ -462,7 +488,6 @@ h6 {
   }
 }
 
-
 .icon3 {
   width: 90px;
   height: 90px;
@@ -473,6 +498,7 @@ h6 {
   top: 0;
   right: 0;
   justify-content: center;
+  cursor: pointer;
 
   @media (max-width: 920px) {
     width: 70px;
@@ -503,17 +529,22 @@ h6 {
 
 .form {
   display: flex;
+  width: 300px;
+
+  @media (max-width: 320px) {
+    width: 130px;
+  }
 }
 
 .input {
   height: 40px;
   min-width: 200px;
-  max-width: 300px;
+  max-width: 200px;
   margin-bottom: 45px;
   background: transparent;
   color: white;
   font-size: 20px;
-  border-bottom: 1px solid grey;
+  border-bottom: 1px solid rgb(175, 173, 173);
 
   @media (max-width: 875px) {
     font-size: 15px;
@@ -525,6 +556,10 @@ h6 {
 
   @media (max-width: 500px) {
     min-width: 280px;
+  }
+
+  @media (max-width: 320px) {
+    min-width: 230px;
   }
 }
 
@@ -543,7 +578,7 @@ h6 {
 
 .countries {
   padding-bottom: 20px;
-  border-bottom: 1px solid grey;
+  border-bottom: 1px solid rgb(175, 173, 173);
   transition: 2s;
   overflow-y: auto;
   max-height: 190px;

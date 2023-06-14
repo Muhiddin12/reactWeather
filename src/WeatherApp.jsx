@@ -16,21 +16,8 @@ function WeatherApp() {
   const weatherFromRedux = useSelector((state) => state.weather);
   const [location, setLocation] = useState("London");
   const [isLoading, setIsLoading] = useState(false);
-  console.log("top", location);
 
   const baseUrl = `https://api.openweathermap.org/data/2.5/weather?q=${location}&units=metric&appid=155feb6fdc297d229a4a58f05839381e`;
-  console.log("weatherFromRedux", weatherFromRedux);
-
-  // const searchLocation = (event) => {
-  //   if (event.key === "Enter" && location == "") {
-  //     alert("xato");
-  //   } else if (event.key === "Enter") {
-  //     axios.get(baseUrl).then((response) => {
-  //       dispatch(weatherDataCreator(response.data));
-  //       // console.log(response.data);
-  //     });
-  //   }
-  // };
 
   const onSubmit = (event) => {
     event.preventDefault();
@@ -41,7 +28,6 @@ function WeatherApp() {
     setLocation(param);
     axios.get(baseUrl).then((res) => {
       dispatch(weatherDataCreator(res.data));
-      // console.log(response.data);
     });
   };
 
@@ -144,27 +130,25 @@ function WeatherApp() {
 
           <div className="search">
             <div className="searchInfo">
-              <div
-                className={
-                  weatherFromRedux.main.temp > 33
-                    ? "icon"
-                    : weatherFromRedux.main.temp > 25
-                    ? "icon2"
-                    : "icon3"
-                }
-              >
-                <box-icon color="black" size="md" name="search"></box-icon>
-              </div>
               <div className="searchInput">
                 <form onSubmit={(event) => onSubmit(event)} className="form">
                   <input
                     className="input"
                     type="text"
                     placeholder="Search..."
-                    // onChange={(e) => setLocation(e.target.value)}
-                    // onKeyPress={searchLocation}
                   />
-                  <div className="test"></div>
+                  <button
+                    type="submit"
+                    className={
+                      weatherFromRedux.main.temp > 33
+                        ? "icon"
+                        : weatherFromRedux.main.temp > 25
+                        ? "icon2"
+                        : "icon3"
+                    }
+                  >
+                    <box-icon color="black" size="md" name="search"></box-icon>
+                  </button>
                 </form>
               </div>
               <ul className="countries">
